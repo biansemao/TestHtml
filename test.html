@@ -2,8 +2,26 @@
 <meta property="og:title" content="Example page title" />
 <meta property="og:type" content="website" />
 </head>
-<body>
-Hello, world! <!-- 这个不需要,我们想直接跳转 -->
-  <a href="thisshop://https://m.thisshop.com/app/coupon/center.html" title="点击一下,了解更多" target="_blank">百度一下</a>
+<body body onload="redirect()">
+<div class="main">
+    <div class="workarea">
+        <div class="app">
+            <img src="https://cdn.appsflyer.com/af-statics/images/rta/app_store_badge.png" onclick="redirect_to_web_store()">
+        </div>
+    </div>
+    <script type="text/javascript">
+        var store_link = 'thisshop://https://m.thisshop.com/app/coupon/center.html';
+
+        function redirect_to_store() {
+            window.location.href = store_link;
+        }
+
+
+        function redirect() {
+            window.location.href = store_link;
+        }
+
+    </script>
+</div>
 </body>
 </html>
